@@ -7,8 +7,15 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@vueuse/core": "^9.12.0",
+    "axios": "^1.3.3",
+    "bootstrap": "^5.2.3",
+    "bootstrap-vue-3": "^0.5.1",
     "core-js": "^3.8.3",
+    "swapi-node": "^0.7.0",
+    "v-img-fallback": "^0.1.5",
     "vue": "^3.2.13",
+    "vue-axios": "^3.5.2",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
