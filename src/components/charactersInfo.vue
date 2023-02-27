@@ -4,8 +4,11 @@
             <div class="col-6 border border-white mt-5">
                 <h3 class="col-12 text-white mt-5 mb-5">STARSHIPS</h3>
                 <div v-for="idIMG in idStashipCharacter" class="col-12">
-                    <img v-bind:src="'https://starwars-visualguide.com/assets/img/starships/' + idIMG + '.jpg'" alt=""
+                    <router-link :to="{name: 'starships', params:{id: idIMG}}">
+                        <img v-bind:src="'https://starwars-visualguide.com/assets/img/starships/' + idIMG + '.jpg'" alt=""
                         @error="errorImg" class="img mb-5 text-start">
+                    </router-link>
+                    
                 </div>
             </div>
             <div class="col-6 border border-white mt-5">
