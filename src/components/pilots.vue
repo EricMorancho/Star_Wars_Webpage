@@ -3,8 +3,10 @@
     <div class="row">
         <h3 class="col-12 text-center text-white mt-5 mb-5">PILOTS</h3>
         <div v-for="idIMG in idPilotos" class="col-3 mb-5">
-            <img v-bind:src="'https://starwars-visualguide.com/assets/img/characters/' + idIMG + '.jpg'" alt=""
-            @error="errorImg" class="img">
+            <router-link :to="{name: 'characters', params: {id: idIMG}}">
+                <img v-bind:src="'https://starwars-visualguide.com/assets/img/characters/' + idIMG + '.jpg'" alt=""
+                @error="errorImg" class="img">
+            </router-link> 
         </div>
     </div>
 </div>
@@ -43,6 +45,7 @@ onMounted(() => {
                        
                     });
                 idPilotos.push(piloto.slice(-3, -1))
+                
                 
 
             })
